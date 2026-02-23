@@ -1,13 +1,15 @@
-import "./App.css";
+import {Route, Routes} from 'react-router-dom'
 import Login from './components/Login.jsx'
-import Navbar from "./components/Navbar.jsx";
+import Home from "./components/Home.jsx";
+import Cart from './components/Cart.jsx';
 
 function App() {
   return (
-      <div>
-        <Navbar/>
-       <Login/>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/cart" element={<Cart/>}/>
+      </Routes>
   );
 }
 
