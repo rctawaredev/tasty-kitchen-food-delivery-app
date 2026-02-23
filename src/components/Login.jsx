@@ -41,41 +41,62 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col md:flex-row bg-white relative">
-      <img
-        src="https://res.cloudinary.com/distnojxb/image/upload/v1771817606/login_t4kb51.png"
-        alt="login"
-        className="absolute top-[-38px] w-[387px] h-[387px] ml-[56px] md:hidden self-end object-cover rounded-l-[208px] rounded-br-[180px] pb-[50px]"
-      />
-
-      {/* 🟠 LEFT FORM */}
-      <div className="flex flex-col justify-center items-center w-full md:w-1/2 pt-[350px] md:pt-0 px-6">
+    <div className="min-h-screen flex flex-col justify-center items-center md:flex-row bg-white">
+      <div className="flex justify-center items-center w-full md:w-1/2 px-6">
         <form
           onSubmit={onSignIn}
-          className="bg-white flex flex-col p-6 md:p-10 shadow-md md:shadow-xl rounded-lg"
+          className="bg-white flex flex-col p-6 md:p-10 md:shadow-xl rounded-lg w-full max-w-[360px] md:max-w-[400px]"
         >
-          <h1 className="text-3xl font-medium text-[#0F172A] text-center pb-6">
-            Login
+          {/* desktop logo */}
+          <img
+            src="https://res.cloudinary.com/distnojxb/image/upload/v1771823772/Frame_274_jivpm6.png"
+            className="w-10 self-center hidden md:block"
+            alt="logo"
+          />
+
+          {/* mobile logo and title */}
+          <div className="flex items-center gap-3 md:hidden pb-6">
+            <img
+              src="https://res.cloudinary.com/distnojxb/image/upload/v1771823772/Frame_274_jivpm6.png"
+              className="w-10"
+              alt="logo"
+            />
+            <h1 className="text-[24px] italic font-bold text-[#F7931E] leading-[32px]">
+              Tasty Kitchen
+            </h1>
+          </div>
+
+          {/* desktop title */}
+          <h1 className="hidden md:block text-[24px] italic font-bold text-[#F7931E] text-center pb-6">
+            Tasty Kitchen
           </h1>
 
-          <label className="text-xs font-[700] leading-[16px] tracking-[1%] text-[#475569] pb-2">USERNAME</label>
+          <h2 className="text-3xl text-center self-start md:self-center font-medium text-[#0F172A] pb-6">
+            Login
+          </h2>
+
+          <label className="text-xs leading-[16px] tracking-[1%] font-[700] text-[#475569] pb-2">
+            USERNAME
+          </label>
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
-            className="p-2 w-full md:w-80 rounded-sm outline-none bg-[#E2E8F0] text-[#475569] placeholder:text-sm mb-4"
+            className="h-[40px] w-full px-2 text-[14px]   rounded-sm outline-none bg-[#E2E8F0] text-[#171F46]  mb-4"
           />
 
-          <label className="text-xs font-[700] leading-[16px] tracking-[1%] text-[#475569] pb-2">PASSWORD</label>
+          <label className="text-xs leading-[16px] tracking-[1%] font-[700] text-[#475569] pb-2">
+            PASSWORD
+          </label>
 
-          <div className="relative w-74 md:w-80">
+          <div className="relative w-full">
             <input
               type={showPassword ? "text" : "password"}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
-              className="p-2 w-full rounded-sm outline-none bg-[#E2E8F0] text-[#475569] pr-10"
+              className="h-[40px] text-[14px] w-full rounded-sm outline-none bg-[#E2E8F0] text-[#171F46]  px-2"
             />
 
             <span
@@ -96,15 +117,15 @@ const Login = () => {
 
           <button
             type="submit"
-            className="bg-[#F7931E] w-full md:w-80 p-2 rounded-md mt-6 text-white"
+            className="bg-[#F7931E] w-full p-2 rounded-md mt-6 text-white"
           >
             Login
           </button>
         </form>
       </div>
 
-
-      <div className="hidden md:block w-1/2">
+      {/*  right image */}
+      <div className="hidden md:block md:w-1/2">
         <img
           src="https://res.cloudinary.com/distnojxb/image/upload/v1771817606/login_t4kb51.png"
           alt="login"
