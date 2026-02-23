@@ -158,7 +158,7 @@ const PopularHotels = () => {
 
         </ul>
         {/* grid */}
-        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10">
 
           {hotelData.map(eachHotel => (
 
@@ -166,7 +166,7 @@ const PopularHotels = () => {
 
               <img
                 src={eachHotel.imgUrl}
-                className="h-[100px] md:h-[150px] w-[160px] md:w-[255px] rounded-[8px] flex-shrink-0"
+                className="h-[100px] md:h-[150px] w-[160px] md:w-[255px] rounded-[8px]  shrink-0"
               />
 
               <div className="flex flex-col gap-2">
@@ -198,7 +198,7 @@ const PopularHotels = () => {
         </ul>
 
 
-        <div className="flex justify-center items-center gap-4 mt-10">
+        <div className="flex justify-center items-center gap-4 my-15">
 
           <button
             className="border border-black text-black px-3 py-1 rounded disabled:opacity-40"
